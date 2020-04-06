@@ -56,7 +56,7 @@ $(function () {
       var name="["+players_ready.length +"/"+ game.numPlayer+"]";
       console.log(name)
       for (var p in players_ready){
-        var $usernameDiv = $('<span class="pReady"/>').text(players_ready[p]);
+        //var $usernameDiv = $('<span class="pReady"/>').text(players_ready[p]);
         //var $messageDiv = $('<li class="message"/>').append($usernameDiv);
         name=name+ " "+  players_ready[p];
       }
