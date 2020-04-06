@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="mystyle.css">
+  <title>Leon | Spy Game</title>
+</head>
+<body>
+  <header>
+    
+      <div>
+        <h1>Willkommen zu Spydraw </h1>
+      </div>
+      <a id="info" href="https://www.notion.so/leonkie/SpyGame-Rules-9df003bbd3f24095812670312c52d4f1">!</a>
+    
+
+  </header>
+  <div>
+    <div id="landing">
+        <!-- Login-Seite -->
+        <div class="login page">
+          <h3 class="title">Wie ist dein Name?</h3>
+          <br/>
+          <input class="usernameInput" type="text" maxlength="14" />
+        </div>
+
+        <div class="waiting_page">
+          <br/>
+          <div class="wp-content">
+            <h1> Waiting Room</h1>
+              
+              <h4 class="list">Player currently waiting</h4> 
+              <a href="#" class="readyButton" id=button>Ready?</a> 
+              <br/>
+            <span class="readylist"></span>
+          </div>
+          <div class="count-down">
+            <span class="timer">10</span>
+          </div>
+        </div>
+
+        <div class="ownWord">
+          <h1>This is the secret Word:</h1>
+          <h3 class="role"></h3>
+          <h3 class = "word"></h3>
+          <a href="#" class="newRound" id=button>new Round!</a> 
+        </div>
+    </div>
+        <!-- Chat-Seite (initial ausgeblendet) -->
+        <div class="chat page">
+          <h3 class="title">Was möchtest du allen anderen mitteilen?</h3>
+          <input class="inputMessage" placeholder="Type here..."/>
+          <ul class="messages"></ul>
+        </div>
+        <div id="background"></div>
+  </div>
+
+  <!-- Programmcode auf der Client-Seite -->
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/main.js"></script>
+</body>
+</html>

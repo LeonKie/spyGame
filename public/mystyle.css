@@ -8,10 +8,10 @@ body {
   }
 
   .count-down {
-    display: none;
-    width: 50px;
-    height: 50px;
-    margin: auto;
+    display:none;
+    width: 10rem;
+    height: 10rem;
+    margin:  auto;
     border-radius: 50%;
     background-color: darkcyan;
     text-align: center;
@@ -19,23 +19,70 @@ body {
 }
 
 .count-down span {
-    height: 25px;
-    width: 25px;
-    display: inline-block;
-    border-radius: 50%;
-    margin: 19px auto;
-    font-family: sans-serif;
-    line-height: 10px;
-    color: azure;
-    font-size: 20px;
-    font-weight: bold
+  height: 10rem;
+  width: 10rem;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 2.25rem auto;
+  font-family: sans-serif;
+  line-height: 5rem;
+  color: azure;
+  font-size: 3rem;
+  font-weight: bold
 }
 
-  a {
+header {
+  display: flex;
+  margin: auto;
+  text-align: center;
+  background-color: transparent;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 0.1rem;
+  height: 15vh;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  z-index: 1;
+}
+
+header:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+header h1 {
+  float: inline-start;
+  display: inline;
+
+}
+
+#info {
+  display: flex;
+  flex-direction: row-reverse ;
+  background-color: white;
+  border:1px solid #dcdcdc; 
+  padding:0.5rem 0.9rem;
+  border-radius: 2rem;
+  font-family: sans-serif;
+  font-weight: bold;
+  transition: background 200ms ease-in-out;
+  
+}
+#info:hover {
+  background-color: lightgray;
+
+}
+
+.wp-content {
+  display: inline;
+}
+
+
+
+  #button {
     box-shadow:inset 0px 1px 0px 0px #ffffff;
     background-color:transparent;
-    border-radius:6px;
-    border:1px solid #dcdcdc;
+    border-radius:10rem;
+    border:1px solid;
     display:inline-block;
     cursor:pointer;
     color:#777777;
@@ -45,6 +92,11 @@ body {
     padding:6px 24px;
     text-decoration:none;
     text-shadow:0px 1px 0px #ffffff;
+    transition: background 200ms ease-in-out;
+  }
+
+  #button:hover {
+    background-color: lightgray;
   }
   a:hover {
     background-color:transparent;
@@ -55,30 +107,51 @@ body {
   }
   
   .waiting_page {
-    margin: 100px auto;
+    display: flex;
+    margin: 1vh auto;
+    height: 40vh;
     text-align: center;
     align-items: center;
-    width: 50%;
     display: none;
-    -webkit-box-shadow: 12px 12px 20px 8px rgba(0,0,0,0.4), -12px -12px 20px 8px rgba(255,255,255,0.4); 
-    box-shadow: 12px 12px 20px 8px rgba(0,0,0,0.4), -12px -12px 20px 8px rgba(255,255,255,0.4);
-    -webkit-border-radius: 40px;
-    -moz-border-radius: 40px;
-    border-radius: 40px;  
+    flex-direction: column;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+   
+  }
+  .waiting_page:hover{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
   }
 
   .ownWord {
     text-align: center;
+    height: 40vh;
     margin: auto;
-    width: 50%;
     display: none;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  }
+
+  .ownWord:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
   }
 
   /* Chat-Seite initial ausblenden */
   .chat.page {
     margin: auto;
-    width: 50%;
     display: none;
+    flex-direction: column;
+    align-items: center;
+    height: 40vh;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  }
+
+  .chat.page:hover{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   }
   
   /* Format für Benutzernamen bei der Ausgabe einer Chat-Nachricht */
@@ -88,7 +161,21 @@ body {
   }
 
   .login.page {
-    margin: auto;
+    display: flex;
+    margin:  1vh auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    background-color: ;
+    margin: 0 auto;
     text-align: center;
-    width: 50%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    z-index: 1;
+  }
+
+  .login.page:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
   }

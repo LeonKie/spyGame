@@ -56,7 +56,7 @@ $(function () {
       var name="["+players_ready.length +"/"+ game.numPlayer+"]";
       console.log(name)
       for (var p in players_ready){
-        //var $usernameDiv = $('<span class="username"/>').text(players_ready[p]);
+        var $usernameDiv = $('<span class="pReady"/>').text(players_ready[p]);
         //var $messageDiv = $('<li class="message"/>').append($usernameDiv);
         name=name+ " "+  players_ready[p];
       }
@@ -66,6 +66,7 @@ $(function () {
     })
 
     socket.on("start_game",function (game) {
+        $(".wp-content").css({"display":"none"});
         startTimer(game);
         
         
@@ -81,8 +82,9 @@ $(function () {
         // Loginmaske ausblenden und Chat-Seite einblenden
         $loginPage.fadeOut();
         $ownWord.fadeOut();
-        $chatPage.show();
-        $waiting_page.show();
+        $chatPage.css({"display": "flex"});
+        $waiting_page.css({"display": "flex"});
+        $(".wp-content").show();
   
         // Chat-Nachricht wird neues, aktuelles Eingabefeld
         $currentInput = $inputMessage.focus();
@@ -102,8 +104,8 @@ $(function () {
       if (username) {
         // Loginmaske ausblenden und Chat-Seite einblenden
         $loginPage.fadeOut();
-        $chatPage.show();
-        $waiting_page.show();
+        $chatPage.css({"display": "flex"});
+        $waiting_page.css({"display": "flex"});
   
         // Chat-Nachricht wird neues, aktuelles Eingabefeld
         $currentInput = $inputMessage.focus();
@@ -174,7 +176,7 @@ $(function () {
     function starteGame(game) {
         $chatPage.fadeOut();
         $waiting_page.fadeOut();
-        $ownWord.show();
+        $ownWord.css({"display": "flex"});
         console.log(username + "  " + game.fake);
         if (username==game.fake) {
           $role.text("Fake");
@@ -186,7 +188,7 @@ $(function () {
     }
 
     function startTimer(game) {
-        $('.count-down').show();
+        $('.count-down').css({"display": "flex"});
         var counterDown = setInterval(function () {
           var counter=parseInt($(".timer").text());
           console.log(counter);
